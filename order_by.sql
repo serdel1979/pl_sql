@@ -27,7 +27,7 @@ select * from articulos order by precio_costo asc;
 select * from articulos order by 1 desc;
 
 
-
+select * from articulos order by precio_costo asc;
 
 
 
