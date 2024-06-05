@@ -1,15 +1,6 @@
-set SERVEROUTPUT on
+select * from libros;
 
-create or replace function fn_costos(valor number)
-return varchar
-is
-    costo varchar(20);
-    begin
-        costo := '';
-        if valor <= 500 then
-            costo := 'economico';
-        else
-            costo := 'costoso';
-        end if;
-        return costo;
-    end;
+
+--update libros set precio = 400 where id=1;
+
+select titulo, precio, fn_costos(precio) as nivel from libros;
