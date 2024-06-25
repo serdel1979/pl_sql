@@ -17,10 +17,20 @@ CREATE OR REPLACE TRIGGER trg_incremento_id_productos
 BEFORE INSERT ON productos
 FOR EACH ROW
 BEGIN
-  -- Asigna el prï¿½ximo valor de la secuencia al id
+  -- Asigna el próximo valor de la secuencia al id
   :NEW.id := seq_id_productos.NEXTVAL;
 END;
 
 insert into productos(descripcion,precio,existencia)values('autos',3500,'100');
 
 select * from productos;
+
+
+
+SELECT product, version, status FROM product_component_version;
+
+
+
+
+
+
