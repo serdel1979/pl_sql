@@ -17,7 +17,7 @@ CREATE OR REPLACE TRIGGER trg_incremento_id_productos
 BEFORE INSERT ON productos
 FOR EACH ROW
 BEGIN
-  -- Asigna el próximo valor de la secuencia al id
+  -- Asigna el prï¿½ximo valor de la secuencia al id
   :NEW.id := seq_id_productos.NEXTVAL;
 END;
 
